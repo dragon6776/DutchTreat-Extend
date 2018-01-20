@@ -1,0 +1,15 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#orderNumber</th>
+            <th>total</th>
+            <th>orderDate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let o in orders">
+            <td>{{ o.orderNumber }}</td>
+            <td>{{ o.orderDate }}</td>
+        </tr>
+    </tbody>
+</table>

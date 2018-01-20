@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/DutchTreat_Extend/DutchTreat/bin/Debug/netcoreapp2.0
+/DutchTreat_Extend/DutchTreat/node_modules
+/DutchTreat_Extend/DutchTreat/obj
+/DutchTreat_Extend/DutchTreat.Services/bin/Debug
+/DutchTreat_Extend/DutchTreat.Services/obj/Debug
+/DutchTreat_Extend/packages/Newtonsoft.Json.10.0.3
+/DutchTreat_Extend/.vs

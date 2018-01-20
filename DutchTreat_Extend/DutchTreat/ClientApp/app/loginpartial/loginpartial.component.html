@@ -1,0 +1,13 @@
+﻿<ul class="nav navbar-nav navbar-right" *ngIf="dataService.loginRequired">
+    <li><a href="#">Register</a></li>
+    <li><a routerLink="login">Log in</a></li>
+</ul>
+
+<ul class="nav navbar-nav navbar-right" *ngIf="!dataService.loginRequired">
+    <li>
+        <a title="Manage" href="/Manage/Index">Hello admin@gmail.com!</a>
+    </li>
+    <li>
+        <button (click)="logout()" class="btn btn-link navbar-btn navbar-link">Log out</button>
+    </li>
+</ul>
