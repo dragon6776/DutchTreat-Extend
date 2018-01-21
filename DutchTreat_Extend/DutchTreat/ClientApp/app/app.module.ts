@@ -24,6 +24,7 @@ let routes = [
     { path: "dashboard", component: DashboardComponent },
     { path: "shop", component: ShopComponent },
     { path: "product-list", component: ProductListComponent },
+    { path: "orders", component: OrdersComponent },
 ];
 
 @NgModule({

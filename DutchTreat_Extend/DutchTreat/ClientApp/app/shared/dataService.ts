@@ -20,6 +20,7 @@ export class DataService {
     public order: Order = new Order();
 
     public products: Product[] = [];
+    public orders: Order[] = [];
 
     constructor(private http: HttpClient, private storageService: SessionStorageService) {
         // update login info from storage
@@ -52,10 +53,21 @@ export class DataService {
         this.storageService.clearStorageLogin();
     }
 
-    public getOrders() {
+    loadOrders() {
+        return this.http.get('/api/orders', {
+            headers: new HttpHeaders().set('Authorization', 'Bearer ' + this.token)
+        })
+            .map((data: any[]) => {
+                this.orders = data;
+                return true;
+            });
+    }
+
+    loadProducts() {
         return this.http.get('/api/products')
             .map((data: any[]) => {
-                return data;
+                this.products = data;
+                return true;
             });
     }
 
@@ -133,13 +145,7 @@ export class DataService {
         });
     }
 
-    loadProducts() {
-        return this.http.get('/api/products')
-            .map((data: any[]) => {
-                this.products = data;
-                return true;
-            });
-    }
+
 
     public AddToOrder(product: Product) {
 
