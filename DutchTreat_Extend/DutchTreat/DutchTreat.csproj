@@ -34,8 +34,4 @@
     <None Include="Views\Shared\_Root.cshtml" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\DutchTreat.Services\DutchTreat.Services.csproj" />
-  </ItemGroup>
-
 </Project>
